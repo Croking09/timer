@@ -13,8 +13,8 @@ The component displays:
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/Croking09/Timer
-cd Timer
+git clone https://github.com/Croking09/timer
+cd timer
 npm install
 npm run dev
 ```
