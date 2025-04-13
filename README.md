@@ -1,16 +1,16 @@
 # ⏳ React Countdown Timer
 
-Este es un componente de temporizador regresivo (`Countdown Timer`) hecho con **React** y **Tailwind CSS**. Muestra el tiempo restante hasta una fecha límite específica y se actualiza automáticamente cada segundo.
+This is a countdown timer component made with **React** and **Tailwind CSS**. It shows the remaining time until a specific deadline and updates automatically every second.
 
-## 🖼️ Vista previa
+## 🖼️ Preview
 
-El componente muestra:
+The component displays:
 
-- ⏰ Un reloj con formato `HH:MM:SS`.
-- 📅 Un número de días grande de fondo con estilo translúcido.
-- 🔔 Un mensaje de "Time is up!" cuando el tiempo se ha agotado.
+- ⏰ A clock in HH:MM:SS format.
+- 📅 A large background number of days with a translucent style.
+- 🔔 A "Time is up!" message when the time runs out.
 
-## 🚀 Instalación
+## 🚀 Installation
 
 ```bash
 git clone https://github.com/Croking09/Timer
@@ -19,10 +19,10 @@ npm install
 npm run dev
 ```
 
-## 📜 Instrucciones
+## 📝 Usage
 
-Para cambiar la fecha debes editar manualmente el archivo `src/App.js` y pasar al componente `Timer` una fecha distinta. Por ejemplo:
+To change the deadline, simply edit the `limitDate` prop in the `Timer` component.
 
-```javascript
-<Timer limitDate={new Date("2025-04-15T23:38:00")}/>;
+```jsx
+<Timer limitDate={new Date("2025-04-15T23:38:00")}/>
 ```
