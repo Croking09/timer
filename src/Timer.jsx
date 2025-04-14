@@ -26,7 +26,7 @@ const Timer = ({limitDate}) => {
     }, [limitDate]);
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex">
             <div className="relative bg-white p-16 rounded-2xl shadow-lg text-center">
                 {Object.keys(timeLeft).length > 0 ? (
                     <div>
