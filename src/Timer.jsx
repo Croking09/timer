@@ -23,7 +23,7 @@ const Timer = ({limitDate}) => {
         });
 
         return () => clearInterval(interval);
-    }, [limitDate]);
+    });
 
     return (
         <div className="flex">
