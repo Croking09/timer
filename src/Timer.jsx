@@ -31,20 +31,36 @@ const Timer = ({limitDate}) => {
                 {Object.keys(timeLeft).length > 0 ? (
                     <div>
                         <div className="relative z-10">
-                            <p className="text-lg font-semibold font-mono">
+                            <p className="text-black text-lg font-semibold font-mono">
                                 {String(timeLeft.hours).padStart(2, '0')}:
                                 {String(timeLeft.minutes).padStart(2, '0')}:
                                 {String(timeLeft.seconds).padStart(2, '0')}
                             </p>
                         </div>
 
-                        <div className="absolute inset-0 flex items-center z-0">
-                            <span className="text-9xl font-bold text-gray-800 opacity-20 pb-3">
-                                {String(timeLeft.days).padStart(2, '0')}
-                            </span>
-                            <span className="text-2xl font-bold text-gray-800 opacity-20" style={{ transform: 'rotate(-90deg)' }}>
-                                days
-                            </span>
+                        <div className="absolute inset-0 flex items-center z-0 justify-center w-full h-full">
+                            {timeLeft.days > 99 ? (
+                                <div className="flex flex-col items-center w-full">
+                                    <span className="text-9xl font-bold text-gray-800 opacity-20 pb-0 mb-0 leading-none">
+                                        {String(timeLeft.days).padStart(2, '0')}
+                                    </span>
+                                    <span className="text-2xl font-bold text-gray-800 opacity-20 mt-0 pt-0 leading-none">
+                                        days
+                                    </span>
+                                </div>
+                            ) : (
+                                <>
+                                    <span className="text-9xl font-bold text-gray-800 opacity-20 pb-3">
+                                        {String(timeLeft.days).padStart(2, '0')}
+                                    </span>
+                                    <span
+                                        className="text-2xl font-bold text-gray-800 opacity-20"
+                                        style={{ transform: 'rotate(-90deg)' }}
+                                    >
+                                        days
+                                    </span>
+                                </>
+                            )}
                         </div>
                     </div>
                 ) : (
