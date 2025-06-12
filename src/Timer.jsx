@@ -26,8 +26,8 @@ const Timer = ({limitDate}) => {
     });
 
     return (
-        <div className="flex">
-            <div className="relative bg-white p-16 rounded-2xl shadow-lg text-center">
+        <div className="flex shrink-0">
+            <div className="relative bg-white p-16 rounded-2xl shadow-lg text-center overflow-hidden">
                 {Object.keys(timeLeft).length > 0 ? (
                     <div>
                         <div className="relative z-10">
@@ -40,7 +40,7 @@ const Timer = ({limitDate}) => {
 
                         <div className="absolute inset-0 flex items-center z-0 justify-center w-full h-full">
                             {timeLeft.days > 99 ? (
-                                <div className="flex flex-col items-center w-full">
+                                <div className="flex flex-col items-center w-full pb-5">
                                     <span className="text-9xl font-bold text-gray-800 opacity-20 pb-0 mb-0 leading-none">
                                         {String(timeLeft.days).padStart(2, '0')}
                                     </span>
