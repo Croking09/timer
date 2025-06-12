@@ -20,7 +20,7 @@ const Timer = ({limitDate}) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setTimeLeft(calculateTimeLeft());
-        });
+        }, 1000);
 
         return () => clearInterval(interval);
     });
